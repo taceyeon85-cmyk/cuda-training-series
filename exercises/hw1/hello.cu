@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 __global__ void hello(){
-  int idx = threadIdx.x + blockIdx.x * blockDim.x;
-  printf("Hello from block: %u, thread: %u\n", idx, threadIdx.x);
+  printf("Hello from block: %u, thread: %u\n", blockIdx.x, threadIdx.x);
   // Hello from block: 0, thread: 0
   // Hello from block: 0, thread: 1
   // Hello from block: 1, thread: 0
